@@ -7,16 +7,21 @@
 </div>
 
 <table>
+
+  <thead>
   <tr>
-    <th>Item</th>
-    <th>Descrição</th>
+    <th>CardName</th>
+    <th>ImageLink</th>
   </tr>
-  <tr th:each="g : ${cardList}">
-    <td th:text="${p.getCardName()}"></td>
-    <td th:text="${p.getImgLink()}"></td>
-     </tr>
+  <tr th:each="card : ${cardList}">
+    <td><span th:text="${card.card_name}"></span>Card Name</td>
+    <td><span th:text="${card.img_link}">ImageLink</span></td>
+  </tr>
+  </thead>
+
 </table>
 
+<a href="login.html">Fazer Login</a>
 <div class="row">
   <footer th:replace="~{geral :: footer}"></footer>
 </div>

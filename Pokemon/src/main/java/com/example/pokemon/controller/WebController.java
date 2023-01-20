@@ -36,6 +36,7 @@ public class WebController {
     public ModelAndView getHomePage() {
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("cardList", cardRepository.findAll());
+        mv.addObject("imageList",cardRepository.findAll());
         return mv;
     }
     @GetMapping("/login")
