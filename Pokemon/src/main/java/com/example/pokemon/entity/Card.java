@@ -46,5 +46,6 @@ public class Card {
     private String cardName;
 
     @ManyToOne
+    @Column(name = "pokemon")
     private Pokemon pokemon;
 }

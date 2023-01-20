@@ -19,10 +19,12 @@ public class Game {
     private long idGame;
 
     @ManyToOne
-    @JoinColumn(name = "location_id")
+    @Column(name = "location_id")
     private Location location;
 
-    //criar uma coluna jogada em vez de uma classe
+   @Column(name = "Trainer_Game")
+   @ManyToOne
+   private Trainer trainerGame;
 
 
     public void setLocation(Location location) {

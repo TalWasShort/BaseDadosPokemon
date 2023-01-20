@@ -18,12 +18,12 @@ public class Pokemon {
     @Column(name = "id_pokemon")
     private long idPokemon;
 
-    @Column
+    @Column(name = "pokemon_name")
     private String pokemonName;
 
-    @Column
+    @Column(name = "generation")
     private int generation;
 
-    @Column
+    @Column(name = "legendary")
     private boolean legendary;
 }

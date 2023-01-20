@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="~{geral :: head(Home)}"></head>
+<body>
+<div class="row">
+  <header th:replace="~{geral :: header}"></header>
+</div>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Descrição</th>
+  </tr>
+  <tr th:each="g : ${cardList}">
+    <td th:text="${p.getCardName()}"></td>
+    <td th:text="${p.getImgLink()}"></td>
+     </tr>
+</table>
+
+<div class="row">
+  <footer th:replace="~{geral :: footer}"></footer>
+</div>
+</body>
+</html>

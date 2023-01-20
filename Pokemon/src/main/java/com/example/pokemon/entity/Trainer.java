@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Table(name = "trainer")
+@Table(name = "TRAINER")
 public class Trainer {
 
     @Id
@@ -22,11 +22,17 @@ public class Trainer {
     private String trainerName;
 
     @ManyToOne
-    @JoinColumn(name = "gender_id")
+    @Column(name = "gender_id")
     private Gender gender;
 
+
+    @Column(name = "password")
+    private String password;
     public void setGender(Gender gender) {
         this.gender = gender;
     }
+
+
+
 
 }
